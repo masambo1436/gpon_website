@@ -1,0 +1,490 @@
+//cases-area
+.cases__box {
+    &--img {
+        overflow: hidden;
+        & img {
+            width: 100%;
+            @include transition(.3s);
+        }
+    }
+} 
+
+.cases__tag {
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+	position: relative;
+	top: -33px;
+	left: 0;
+	right: 0;
+	margin: 0 30px 0 30px;
+    height: 65px;
+	border-radius: 70px;
+    z-index: 3;
+    @media #{$lg} {
+        margin: 0;
+    }
+    @media #{$md} {
+        margin: 0;
+    }
+    @media #{$xs} {
+        margin: 0;
+    }
+        & li {
+            & .cases--author {
+                & .semi-title {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    } 
+.cases__tag {
+    & li {
+        & .cases--author {
+            margin-left: 10px;
+            & .semi-02-title {
+                margin-bottom: 0;
+            }
+        }
+        & .d-btn {
+            border-radius: 0;
+            border-top-right-radius: 60px;
+            border-bottom-right-radius: 60px;
+            height: 65px;
+            line-height: 1;
+            text-align: center;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            width: 140px;
+            justify-content: center;
+            &::before {
+                border-radius: 0;
+                border-top-right-radius: 60px;
+                border-bottom-right-radius: 60px;
+            }
+        }
+    }
+} 
+.cases-progress  {
+    & .funding {
+        color: $heding;
+        font-weight: 600;
+        font-family: $barlow;
+        letter-spacing: 0;
+        margin-bottom: 10px;
+        & span {
+            font-size: 18px;
+            color: $theme-color;
+        }
+    }
+   & .progress {
+        height: 5px;
+        overflow: visible;
+        background-color: $white;
+        border-radius: 0;
+        position: relative;
+       & .progress-bar {
+            background-color: $theme-color;
+            transition: width .6s ease;
+            & h5 {
+                position: absolute;
+                right: 0;
+                top: -33px;
+            }
+        }
+    }
+}
+.cases {
+    &__content {
+        padding: 0 45px 35px 45px;
+        @media #{$lg} {
+            padding:0 25px 35px 25px;
+        }
+        @media #{$xs} {
+            padding:0 25px 35px 25px;
+        }
+        & h3 {
+            font-size: 30px;
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 15px;
+            @include transition(.3s);
+        }
+        & p {
+            font-size: 16px;
+        }
+    }
+    &:hover {
+        & .cases__box--img {
+            & img {
+                transform: scale(1.1);
+            }
+        }
+        & h3 {
+            color: $theme-color;
+        }
+    }
+}
+//cases-area-02
+.cases-area-02 {
+    z-index: 2;
+    & .custom-container-04 {
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background: $grey2;
+        min-height: 850px;
+        z-index: -1;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background: url(../img/shape/07.png);
+        width: 100%;
+        min-height: 635px;
+        z-index: -1;
+    }
+    
+    & .cases {
+        &__tag {
+            @media #{$laptop} {
+                margin: 0;
+            }
+            & li {
+               & .cases--author {
+                    margin-left: 5px;
+                }
+            } 
+        }
+        &__content {
+            @media #{$laptop} {
+                padding: 0 15px 35px 15px;
+            }
+        }
+    }
+}
+//statistics-area
+.statistics {
+    padding: 80px 0 45px 0;
+    z-index: 1;
+    &::before {
+        content: '';
+        position: absolute;
+        background: url(../img/shape/09.png);
+        width: 100%;
+        height: 170px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+    .counetrs__icon {
+        display: inline-block;
+        & i {
+            color: $theme-color;
+            display: inline-block;
+        }
+    } 
+    &.counetrs  {
+        h1 {
+            color: $heding;
+        }
+        & p {
+            color: $body-text-color;
+            font-size: 16px;
+        }
+    } 
+}
+.statistics-box {
+    &__icon {
+        display: inline-block;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        box-shadow: 0px 10px 30px 0px rgba(77, 183, 166, 0.43);
+       & i {
+            color: $theme-color2;
+            font-size: 40px;
+        }
+    }
+} 
+
+//casea-area-03
+.tag-img {
+	position: absolute;
+	top: 40px;
+    right: -27px;
+    box-shadow: 0px 10px 30px 0px rgba(241, 91, 67, 0.43);
+    border-radius: 50%;
+    @media #{$xs} {
+        right: 20px;
+    }
+}
+.cases-04 {
+    & .cases__content {
+        padding: 40px 38px 20px 38px;
+        @media #{$md} {
+            padding: 25px 25px 20px 25px;
+        }
+        @media #{$xs} {
+            padding: 25px 25px 20px 25px;
+        }
+        & .semi-02-title {
+            margin-bottom: 38px;
+        }
+    }
+   & .cases__box {
+        & img {
+          @media #{$lg} {
+              width: 100%;
+          }
+          @media #{$md} {
+              width: 100%;
+          }
+          @media #{$xs} {
+              width: 100%;
+          }
+        }
+    }
+}
+
+
+.portfolio-menu {
+	padding-bottom: 26px;
+	margin-left: 60px;
+    margin-right: 60px;
+    @media #{$xs} {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    & button {
+        border: 0;
+        padding: 7px 16px;
+        border-radius: 30px;
+        background: none;
+        color: $black;
+        font-size: 15px;
+        line-height: 1;
+        transition: all 0.3s ease 0s;
+        cursor: pointer;
+        font-weight: 700;
+        position: relative;
+        font-family: $karla;
+        margin: 0 5px;
+        @media #{$lg} {
+            margin: 0px 2px;
+        }
+        @media #{$md} {
+            margin: 5px 5px;
+        }
+        @media #{$xs} {
+            margin: 5px 2px;
+        }
+        &:hover, &.active {
+            color: white !important;
+            background: #ea5822;
+        }
+    } 
+}
+
+
+.pagination-area {
+   & .page-item {
+       & .page-link {
+            position: relative;
+            display: block;
+            font-size: 15px;
+            margin-left: -1px;
+            line-height: 32px;
+            color: $body-text-color;
+            background-color: $grey2;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-weight: 700;
+            font-family: $barlow;
+            border: 0;
+            text-align: center;
+            transition: all 0.3s ease-in;
+            margin: 0 3px;
+            @media #{$xs} {
+               width: 40px;
+               height: 40px;
+               margin: 0 1px;
+               line-height: 22px;
+            }
+            &:focus {
+                box-shadow: none;
+            }
+            &:hover {
+                color: $white;
+                background: $theme-color;
+            }
+        }
+    }
+}
+
+
+//cases-area-02
+.cases-area-02 {
+   & .slick-slider {
+      &  button {
+            border: 0;
+            color: $white;
+            font-size: 18px;
+            line-height: 55px;
+            width: 55px;
+            height: 55px;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            left: -90px;
+            transform: translateY(-50%);
+            background: $theme-color2;
+            display: inline-block;
+            transition: all 0.3s ease-in;
+            &.slick-next {
+                left: auto;
+                right: -90px;
+                position: absolute;
+            }
+            &:hover {
+                background: $theme-color;
+            }
+        }
+   }
+   
+}
+
+//cases-details-area
+.cases-wrapper-box {
+   & .cases__content {
+        padding: 0 0 35px 0;
+        & h2 {
+            font-size: 55px;
+            margin-bottom: 35px;
+            @media #{$xs} {
+                font-size: 33px;
+            }
+        }
+    }
+}
+.cases-meta {
+   & .cases-progress {
+        & .funding {
+            margin-bottom: 15px;
+            & span {
+                font-size: 30px;
+            }
+        } 
+        & .progress {
+            background-color: $grey2;
+            width: 500px;
+            @media #{$xs} {
+              width: 100%;  
+            }
+            @media #{$sm} {
+              width: 500px;  
+            }
+           & .progress-bar {
+                & h3 {
+                    position: absolute;
+                    right: 0;
+                    top: -47px;
+                }
+           } 
+        }
+    } 
+}
+
+.cases-single {
+    &__icon {
+        background: $theme-color2;
+        text-align: center;
+        width: 45px;
+        height: 45px;
+        display: inline-block;
+        line-height: 45px;
+        float: left;
+        margin-right: 25px;
+        & i {
+            color: $white;
+            font-size: 20px;
+            line-height: 1;
+        }
+    }
+    &__content {
+       & h5 {
+            font-size: 20px;
+        }
+    }
+}
+.cases-video {
+	background-size: cover;
+	background-position: center;
+	min-height: 540px;
+    background-repeat: no-repeat;
+    position: relative;
+    @media #{$xs} {
+        min-height: 450px;
+    }
+    &::before {
+        content: "";
+        background-color: #061738;
+        opacity: 0.65;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+   & .popup-video {
+        width: 100px;
+        height: 70px;
+        border-radius: 10px;
+        line-height: 70px;
+        background: #ff0000;
+        & i {
+            font-size: 15px;
+            color: $white;
+        }
+    }
+} 
+.cases-title {
+	font-size: 30px;
+}
+.widget {
+   & .events-03 {
+       width: 100%;
+       background-size: cover;
+       background-position: center;
+       background-repeat: no-repeat;
+       min-height: 570px;
+        & .cases {
+            bottom: 0;
+            padding-left: 0;
+            padding-right: 0;
+            &__content {
+                padding: 0 38px 35px 38px;
+                @media #{$lg} {
+                    padding: 0 25px 35px 25px !important;
+                }
+                @media #{$xs} {
+                    padding: 0 20px 10px 20px;
+                }
+            }
+        }
+    } 
+}

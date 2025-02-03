@@ -1,0 +1,147 @@
+//services-area
+.services-area {
+    & .custom-container-02 {
+        max-width: 1230px;
+        margin: 0 auto;
+    }
+    & .services-bg {
+        margin-top: -130px;
+        @media #{$md} {
+            margin-top: 50px;
+        }
+        @media #{$xs} {
+            margin-top: 50px;
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+}
+.services {
+    &__img {
+        & img {
+            width: 100%;
+        }
+    }
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        & .semi-02-title {
+            color: $white;
+            margin-bottom: 5px;
+        }
+        & p {
+            color: $white;
+        }
+        & li {
+            &:first-child {
+                padding-left: 50px;
+                @media #{$lg} {
+                    padding-left: 20px;
+                }
+                @media #{$xs} {
+                    padding-left: 30px;
+                }
+            }
+            & .more_btn {
+                display: inline-block;
+                position: relative;
+                z-index: 1;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    background: $white;
+                    clip-path: polygon(15% 0, 100% 0%, 100% 100%, 0 100%);
+                    right: 0;
+                    top:0;
+                    width: 110px;
+                    height: 100px;
+                    z-index: -1;
+                }
+                &::after {
+                    content: '';
+                    position: absolute;
+                    background: $theme-color;
+                    clip-path: polygon(15% 0, 100% 0%, 100% 100%, 0 100%);
+                    right: 0;
+                    top: 0;
+                    width: 110px;
+                    height: 120px;
+                    z-index: -1;
+                    opacity: 0;
+                    @include transition(.4s);
+                }
+               & i {
+                   color: $heding;
+                    font-size: 30px;
+                    line-height: 100px;
+                    padding-right: 35px;
+                }
+            } 
+        }
+        &:hover {
+            & .semi-02-title {
+                color: $theme-color;
+            }
+            & .more_btn {
+                & i {
+                    color: $white;
+                }
+                &::after {
+                    top: -20px;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    
+}
+
+
+//faq-area
+.card {
+	border: 0;
+    border-radius: 0;
+   & .card-header {
+        padding: 0;
+        border: 0;
+        background: 0;
+       & button {
+            border: 0;
+            background: 0;
+            color: $heding;
+            font-size: 30px;
+            font-family: $barlow;
+            font-weight: 600;
+            display: block;
+            width: 100%;
+            text-align: left;
+            padding: 13px 70px;
+            word-wrap: normal;
+            white-space: normal;
+            @media #{$xs} {
+                padding: 13px 20px;
+                font-size: 20px;
+            }
+            @media #{$sm} {
+                padding: 13px 30px;
+            }
+        }
+       & .btn:focus, & .btn:hover {
+            text-decoration: none;
+        }
+    }
+   & .card-body {
+        padding: 0 70px;
+        @media #{$xs} {
+            padding: 0 20px;
+        }
+        @media #{$sm} {
+            padding: 0 30px;
+        }
+    }
+}

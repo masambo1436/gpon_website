@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EduHero Challenge Registration</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Container to center the registration form */
+      .container {
+        width: 80%;
+        max-width: 600px;
+        margin: 0 auto; /* Center the container */
+      }
+
+      /* Registration Form Section */
+      .registration-form {
+        background-color: #f1f1f1;
+        padding: 50px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        margin: 30px auto;
+        max-width: 800px;
+      }
+
+      /* Form Styling */
+      .registration-form form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      /* Form Labels */
+      .registration-form label {
+        font-size: 1.1rem;
+        color: #333;
+        align-self: flex-start; /* Align the label to the left */
+        margin-bottom: 5px; /* Add some space below the label */
+      }
+
+      /* Input Fields */
+      .registration-form input[type="text"],
+      .registration-form input[type="email"],
+      .registration-form input[type="tel"] {
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 1rem;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      /* Submit Button */
+      .registration-form input[type="submit"] {
+        background-color: #28a745; /* Green button */
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        font-size: 1.1rem;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      /* Logo Image */
+      .logo {
+        width: 150px; /* Set width for the logo */
+        height: auto; /* Maintain aspect ratio */
+      }
+      .registration-form input[type="submit"]:hover {
+        background-color: #218838; /* Darker green on hover */
+      }
+
+      /* Checkbox Styling */
+      .checkbox-group {
+        display: flex;
+        align-items: center;
+      }
+
+      .checkbox-group input {
+        margin-right: 10px;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 600px) {
+        .registration-container {
+          padding: 30px;
+        }
+      }
+      input[type="file"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Registration Form Section with Centered Container -->
+    <section class="registration-form">
+      <div class="container">
+        <!-- Logo Section -->
+        <div class="logo-container">
+          <img src="header_logo_one.png" alt="Your Logo" class="logo" />
+        </div>
+
+        <h2>Register for EduHero Challenge</h2>
+        <form action="/submit-registration" method="POST">
+          <!-- Upload Passport Image -->
+          <div class="input-group">
+            <label for="passport"
+              >Upload Passport Image: <span class="required">*</span></label
+            >
+            <input
+              type="file"
+              id="passport"
+              name="passport"
+              accept="image/*"
+              required
+            />
+          </div>
+          <small class="error-message"></small>
+          <label for="name">Full Name: <span class="required">*</span></label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="Enter your full name"
+          />
+          <small class="error-message"></small>
+          <label for="email">Email: <span class="required">*</span></label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="Enter your email"
+          />
+          <small class="error-message"></small>
+          <label for="phone"
+            >Phone Number: <span class="required">*</span></label
+          >
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            required
+            placeholder="Enter your phone number"
+          />
+          <small class="error-message"></small>
+          <label for="address">Address: <span class="required">*</span></label>
+          <input
+            type="text"
+            id="address"
+            name="address"
+            required
+            placeholder="Enter your address"
+          />
+          <small class="error-message"></small>
+
+          <!-- Upload Pitch File -->
+          <div class="input-group">
+            <label for="pitch"
+              >Upload Pitch (Video, PDF, or Image):
+              <span class="required">*</span></label
+            >
+            <input
+              type="file"
+              id="pitch"
+              name="pitch"
+              accept="image/*,video/*,.pdf"
+              required
+            />
+            <small class="error-message"></small>
+          </div>
+
+          <!-- Terms and Conditions Checkbox with Modal -->
+          <div class="input-group checkbox-group">
+            <input type="checkbox" id="terms" name="terms" required />
+            <label for="terms">
+              Read & agree to the
+              <a href="#" id="openModal">Terms and Conditions</a>
+              <span class="required">*</span>
+            </label>
+            <small class="error-message"></small>
+          </div>
+          <input type="submit" value="Submit Registration" />
+        </form>
+      </div>
+    </section>
+
+    <!-- Modal for Terms and Conditions -->
+    <div id="termsModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Terms and Conditions</h2>
+        <p>
+          By participating in the EduHero Challenge, you agree to abide by the
+          rules and guidelines set by GOALPrime Organization Nigeria.
+          Submissions must be original work and not plagiarized. The
+          organization reserves the right to disqualify any participant found
+          violating the rules. Prizes are awarded based on public engagement and
+          judges' points. By submitting your entry, you grant GOALPrime
+          permission to share and promote your work on its platforms.
+        </p>
+        <p>
+          By participating in the EduHero Challenge, you agree to abide by the
+          rules and guidelines set by GOALPrime Organization Nigeria.
+          Submissions must be original work and not plagiarized. The
+          organization reserves the right to disqualify any participant found
+          violating the rules. Prizes are awarded based on public engagement and
+          judges' points. By submitting your entry, you grant GOALPrime
+          permission to share and promote your work on its platforms.
+        </p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

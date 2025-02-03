@@ -1,0 +1,128 @@
+//footer-area
+.footer-area {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.footer-bottom-area {
+    border-bottom: 2px solid $hr-border-color;
+}
+.scroll-target {
+	color: $white;
+	background: $theme-color2;
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	right: 0;
+    margin: 0 auto;
+    bottom:95px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    z-index: 3;
+    &:hover {
+        background: $theme-color2;
+    }
+    @media #{$xs} {
+        margin: 0 0 0 auto
+    }
+}
+.footer__widget {
+    & .semi-02-title {
+        color: $white;
+    }
+    &.fot_abot {
+        @media #{$lg} {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+    @media #{$md} {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    @media #{$xs} {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    @media #{$sm} {
+        padding-left: 0;
+        padding-right: 0;
+    }
+   & .footer-logo {
+        display: inline-block;
+    }
+    & p {
+        color: $white;
+    }
+    & .fot-list {
+       & li {
+            margin-bottom: 8px;
+           & a {
+                color: $white;
+                font-size: 15px;
+                line-height: 1.2;
+                font-family: $karla;
+                font-weight: 400;
+                position: relative;
+                @include transition(.4s);
+                &::before {
+                    content:'\f054';
+                    position: absolute;
+                    font-family: 'Font Awesome 5 pro';
+                    font-size: 13px;
+                    color: $body-text-color;
+                    left: 0;
+                    top:5px;
+                    line-height: 1;
+                    opacity: 0;
+                    visibility: hidden;
+                }
+                &:hover, &:focus {
+                    color:$theme-color;
+                    padding-left: 10px;
+                    &::before {
+                        color: $theme-color;
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+            }
+        } 
+    } 
+}
+
+//copy-right-area
+.copy-right-area {
+    & .copyright {
+        background: #091c40;
+        padding: 20px 0;
+        & p {
+              color: $white;
+              & span {
+                  color: $theme-color;
+              }
+          } 
+      }
+}
+.copy-area-02 {
+    & .copyright {
+        & p {
+            & span {
+                color: $theme-color2;
+            }
+        } 
+    } 
+}
+.fot__subscribe {
+    & .form-area {
+        & a {
+            padding: 20px 50px 20px 45px;
+        }
+    }
+}
+
+
+

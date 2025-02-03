@@ -1,0 +1,286 @@
+//team-area
+.team-area {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+    &:before {
+        content: '';
+        position: absolute;
+        background: $black;
+        opacity: 0.9;
+        left: 0;
+        top:0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+}
+.team {
+    padding: 30px 70px 30px 60px;
+    z-index: 1;
+    @media #{$lg} {
+        padding: 30px 0px 30px 20px;
+    }
+    @media #{$md} {
+        padding: 30px 0px 30px 30px;
+    }
+    @media #{$xs} {
+        padding: 30px 20px 30px 20px;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        background: $theme-color;
+        left: 0;
+        top: 0;
+        width: 7px;
+        height: 0;
+        z-index: 1;
+        @include transition(.4s);
+    }
+    &::after {
+        content: '\f500';
+        font-family: 'Font Awesome 5 Pro';
+        position: absolute;
+        color: $grey2;
+        font-size: 90px;
+        right: 70px;
+        top: 63px;
+        z-index: -1;
+        @include transition(.4s);
+    }
+    &__thumb {
+        @media #{$md} {
+            float: none;
+            margin-bottom: 20px;
+            margin-right: 0;
+        }
+        @media #{$xs} {
+            float: none;
+            margin-bottom: 20px;
+        }
+    }
+    &__content {
+       & h3 {
+            font-size: 30px;
+            font-weight: 600;
+        }
+        & p {
+            color: $theme-color;
+            margin-bottom: 8px;
+        }
+        &--social {
+            & a {
+                margin-right: 25px;
+                @media #{$lg} {
+                    margin-right: 15px;
+                }
+                & i {
+                    font-size: 15px;
+                    @include transition(.4s);
+                }
+                &:hover {
+                    & i {
+                        color: $theme-color2;
+                        transform: rotateY(360deg);
+                    }
+                }
+            }
+        }
+    }
+    &:hover {
+        &::before {
+            height: 100%;
+        }
+        &::after {
+            height: 100%;
+        }
+    }
+}
+
+//teams
+.teams {
+    &__content {
+        & .semi-02-title {
+            color: $black;
+        }
+        & p {
+            color: $theme-color;
+        }
+    }
+    &:hover {
+        & .teams__thumb--img {
+                & img {
+                    transform: scale(1.1) rotate(3deg);
+                }
+        }
+    }
+}
+.teams__thumb {
+    overflow: hidden;
+    &--img {
+        z-index: 1;
+        &::before {
+            content: '';
+            background-image: -moz-linear-gradient( 90deg, rgb(6,23,56) 0%, rgba(6,23,56,0) 100%);
+            background-image: -webkit-linear-gradient( 90deg, rgb(6,23,56) 0%, rgba(6,23,56,0) 100%);
+            background-image: -ms-linear-gradient( 90deg, rgb(6,23,56) 0%, rgba(6,23,56,0) 100%);
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            opacity: 0;
+            z-index: 1;
+            @include transition(.4s);
+        }
+        overflow: hidden;
+        & img {
+            width: 100%;
+            transition: all .3s ease-in-out;
+        }
+    }
+    &--social {
+        position: absolute;
+        bottom: -70px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        margin: 0 auto;
+        z-index: 1;
+        padding-bottom: 20px;
+        opacity: 0;
+        @include transition(.4s);
+       & a{
+            width: 45px;
+            height: 45px;
+            background: $white;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            display: inline-block;
+            line-height: 45px;
+            @include transition(.4s);
+           & i {
+                color: b$body-text-color;
+                font-size: 15px;
+                line-height: 1;
+                &:nth-child(1) {
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    text-align: center;
+                    transition: all .3s ease-in-out;
+                    top:50%;
+                    transform: translateY(-50%);
+                }
+                &:nth-child(2) {
+                    top: 100%;
+                    position: absolute;
+                    left: 0;
+                    transform: translate(-100% -50%);
+                    right: 0;
+                    text-align: center;
+                    transition: all .3s ease-in-out;
+                }
+            }
+            &:hover {
+                background: $theme-color;
+                
+                & i {
+                    color: $white;
+                    &:nth-child(1) {
+                        top: -150%;
+                        transform: translateY(-100%);
+                    }
+                    &:nth-child(2) {
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                }
+            }
+        }
+    } 
+    &:hover {
+        & .teams__thumb--img {
+            &::before {
+                opacity: 1;
+            }
+        }
+        & .teams__thumb--social {
+            bottom: 0;
+            opacity: 1;
+        }
+    }
+}
+.team-details-img {
+    & img {
+        width: 100%;
+    }
+}
+.team-details-wrapper {
+    @media #{$lg} {
+        padding-left: 0;
+    }
+    @media #{$md} {
+        padding-left: 0;
+    }
+    @media #{$xs} {
+        padding-left: 0;
+    }
+    & span {
+        color: $theme-color;
+        display: inline-block;
+    }
+   & .teams__thumb--social {
+        position: relative;
+        bottom: 0;
+        opacity: 1;
+        padding-left: 0;
+        text-align: left;
+        & a {
+            background: $grey2;
+            &:hover {
+                background: $theme-color; 
+            }
+        }
+    }
+} 
+.team-skill-area {
+    .charts {
+        &__content {
+            & h3 {
+                color: $heding;
+            }
+            & p {
+                color: $heding;
+            }
+        }
+        &__circle {
+            & .chart {
+               & h2  {
+                color: $heding;
+                }
+            }
+            & .chart2 {
+                display: inline-block;
+                position: relative;
+                & h2 {
+                    color: $heding;
+                    font-size: 55px;
+                    margin: 0;
+                    position: absolute;
+                    text-align: center;
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                    line-height: 120px;
+                   & span {
+                        font-size: 25px;
+                    }
+                } 
+            } 
+        }  
+    } 
+}

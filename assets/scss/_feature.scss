@@ -1,0 +1,108 @@
+//features-area
+.features {
+    padding: 45px 45px 40px 45px;
+    @include transition(.4s);
+    @media #{$xs} {
+        padding: 45px 25px 40px 25px;
+     }
+    @media #{$sm} {
+        padding: 45px 45px 40px 45px;
+     }
+    &__icon {
+        @media #{$md} {
+           margin-bottom: 20px;
+        }
+        @media #{$xs} {
+           margin-bottom: 20px;
+        }
+        i {
+            color: $theme-color;
+            font-size: 95px;
+        }
+    } 
+    &__content {
+       & h3 {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+        & p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+       & .more_btn2 {
+            color: $heding;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            @include transition(.3s);
+            & i {
+                font-size: 18px;
+                line-height: 1;
+                margin-left: 10px;
+                transform: translateY(2px);
+            }
+            &:hover {
+                color: $theme-color;
+            }
+        }
+        &:hover {
+            & h3 {
+                color: $theme-color;
+            } 
+        }
+    }
+    &:hover, &.active {
+        box-shadow: 0px 10px 30px 0px rgba(172, 172, 172, 0.17);
+    } 
+}
+//features-02
+.features-02 {
+    background: $theme-color2;
+    text-align: center;
+    padding: 50px 30px 36px 30px;
+    z-index: 1;
+    &:hover, &.active {
+        background: $theme-color;
+       & .features-02__back {
+           opacity: 1;
+       }
+    }
+   & .features__icon {
+        & i {
+            color: $white;
+            font-size: 55px;
+        }
+   } 
+   & .features__content {
+        & h3 {
+            color: $white;
+        }
+        & p {
+            color: $white;
+            margin-bottom: 5px;
+        }
+        & .more_btn2 {
+            color: $white;
+            &:hover {
+                color: $black;
+            }
+        }
+    }
+    &__back {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        z-index: -1;
+        opacity: 0;
+        @include transition(.4s);
+    } 
+    &:hover {
+        & .features__content {
+            & h3 {
+                color: $black;
+            }
+        }
+    }
+}

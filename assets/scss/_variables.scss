@@ -1,0 +1,41 @@
+// Font Family
+$barlow: 'Barlow Condensed', sans-serif;
+$karla: 'Karla', sans-serif;
+
+
+
+// Colors ---------------
+$white: #ffffff;
+$black: #061738;
+$black2: #1b1f2e;
+$black3: #08133b;
+$grey:#364f75;
+$grey2:#f4f2f1;
+$grey3:#97a7c0;
+$pink-soft: #fef3f2;
+$theme-color: #f15b43;
+$theme-color2: #4db7a6;
+$body-text-color: #777777;
+$body-text-color2: #364f75;
+$hr-border-color:#414657;
+$hr-border-color2:#feeeec;
+$hr-border-color3:#1a2e54;
+
+
+
+// Heading Color
+$heding: #001234;
+$heding2: #23293e;
+
+  
+
+// Responsive Variables
+$xxl: 'only screen and (min-width: 1601px) and (max-width: 1920px)';
+$xl: 'only screen and (min-width: 1601px) and (max-width: 1800px)';
+$laptop: 'only screen and (min-width: 1200px) and (max-width: 1600px)';
+$lg : 'only screen and (min-width: 992px) and (max-width: 1200px)';
+$md:'only screen and (min-width: 768px) and (max-width: 991px)';
+$xs:'(max-width: 767px)';
+$sm: 'only screen and (min-width: 576px) and (max-width: 767px)';
+
+  

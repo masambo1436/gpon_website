@@ -1,0 +1,236 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Navbar */
+.navbar {
+    margin-bottom: 30px;
+        /* Add space below navbar */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand img {
+    height: 50px;
+}
+
+.nav-link {
+    color: #333 !important;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    color: #28a745 !important;
+}
+/* Carousel Height Adjustment */
+.hero-section .carousel-inner img {
+    height: 500px;
+    object-fit: cover;
+}
+/* Call-to-Action Section */
+.cta-section {
+    position: relative;
+    height: 100vh;
+    background: url('image1.jpg') no-repeat center center / cover;
+    background-size: cover;
+    animation: bgTransition 15s infinite alternate;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    /* Add space after CTA */
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+    text-align: center;
+    margin-bottom: 50px;
+    /* Add space after Hero Section */
+}
+
+
+/* Section Styling */
+.section {
+    padding: 80px 20px;
+    background: #ffffff;
+    margin: 50px 10;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 60px;
+       
+}
+
+/* Section Images */
+.section img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+/* Footer */
+.footer {
+    background: #28a745;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer .social-icons a {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.footer .social-icons a:hover {
+    color: #000;
+}
+
+/* Social Media Buttons */
+.social-share {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #28a745;
+    /* Default green background */
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 10px;
+}
+
+.social-btn i {
+    font-size: 18px;
+}
+
+/* Hover Effect */
+.social-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Platform-Specific Colors */
+.twitter {
+    background-color: #1DA1F2;
+}
+
+.facebook {
+    background-color: #1877F2;
+}
+
+.instagram {
+    background-color: #C13584;
+}
+
+.tiktok {
+    background-color: #000;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .social-btn {
+        display: block;
+        width: 80%;
+        margin: 10px auto;
+    }
+}
+
+/* Modal Background */
+#termsModal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Dark background overlay */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal Content - Smaller & Centered */
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    width: 50%;
+    /* Adjust size */
+    max-width: 450px;
+    /* Limit maximum width */
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Required Field Asterisk */
+.required {
+    color: red;
+    font-weight: bold;
+}
+
+/* Form Error Styling */
+.error {
+    border: 1px solid red;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    display: block;
+    margin-top: 3px;
+}

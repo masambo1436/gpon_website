@@ -1,0 +1,52 @@
+//counter-area
+.counetrs {
+    &__icon {
+       & i {
+        color: $white;
+        font-size: 85px;
+       }
+    }
+    & h1 {
+        color: $white;
+        font-size: 65px;
+        font-weight: 600;
+    }
+    & p {
+        color: $white;
+        font-size: 16px;
+    }
+}
+.brand-area {
+    & .custom-container-03 {
+        max-width: 1430px;
+        margin: 0 auto;
+    }
+   & .brand-img {
+       & a {
+            display: inline-block;
+            margin: 0 auto;
+            text-align: center;
+        }
+    } 
+}
+//counter-area-02
+.counter-area-02 {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    &::before {
+        content: '';
+        position: absolute;
+        background: #061738;
+        opacity: 0.9;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+    }
+   & .counetrs__icon {
+        & i {
+            color: $theme-color2;
+        }
+    } 
+}

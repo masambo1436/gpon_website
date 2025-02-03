@@ -1,0 +1,134 @@
+//gallery-area
+
+.gallery-area {
+    @media #{$xs} {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+.gallery {
+    &__thumb {
+        position: relative;
+        overflow: hidden;
+        &::before {
+            content: '';
+            position: absolute;
+            background: $theme-color;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+            opacity: 0.8;
+            transform: scale(0);
+            @include transition(.4s);
+        }
+        & img {
+            width: 100%;
+            display: block;
+            @include transition(.4s);
+        }
+    }
+    &__content {
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: 3;
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: 0;
+        visibility: hidden;
+        @include transition(.4s);
+        & a {
+            display: inline-block;
+            & i {
+                color: $white;
+                font-size: 30px;
+                line-height: 1;
+                margin-bottom: 5px;
+            }
+        }
+        & h3 {
+            color: $white;
+            font-size: 30px;
+            font-weight: 600;
+        }
+    }
+    &:hover {
+        & .gallery__thumb {
+            &::before {
+                transform: scale(1);
+            }
+            & img {
+                transform: scale(1.1);
+            }
+        }
+        & .gallery__content {
+            opacity: 1;
+            visibility: visible;
+        } 
+    }
+}
+
+//gallery-02
+.gallery-02 {
+    overflow: hidden;
+   & .gallery__thumb {
+        &::before {
+            background: $black;
+            opacity: 0;
+        }
+    }
+    & .gallery__content {
+        left: 75px;
+        right: 25px;
+        background:$white;
+        padding: 20px 25px 20px 25px;
+        display: inline-block;
+        top:auto;
+        bottom: 0;
+        @include transition(.4s);
+        @media #{$xs} {
+            left: 25px;
+        }
+        & .semi-02-title {
+            margin-bottom: 0;
+            @media #{$md} {
+                font-size: 19px;
+            }
+            @media #{$xs} {
+                font-size: 19px;
+            }
+            &:hover {
+                color: $theme-color;
+            }
+        }
+        & a {
+            & span {
+                width: 40px;
+                height: 40px;
+                border: 1px solid #e4e4e4;
+                display: inline-block;
+                background: $white;
+                margin-left: 30px;
+                line-height: 35px;
+                & i {
+                    color: $theme-color;
+                    font-size: 15px;
+                    line-height: 1;
+                }
+            }
+        }
+    }
+    &:hover {
+        & .gallery__thumb {
+            &::before {
+                background: $black;
+                opacity: 0.5;
+            }
+        }
+        & .gallery__content { 
+            bottom: 50px;
+        } 
+    } 
+}
