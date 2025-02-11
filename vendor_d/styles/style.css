@@ -1,0 +1,20 @@
+/* Custom Styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.hero-section {
+    background-color: #f8f9fa;
+}
+
+.card {
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+footer {
+    background-color: #343a40;
+}

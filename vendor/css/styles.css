@@ -1,0 +1,51 @@
+/* Custom Styles for GPON Our Suppliers Page */
+
+/* Header Styles */
+header {
+    background: url('../assets/images/supplier.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Main Content Styles */
+main h2 {
+    color: #46a011;
+}
+
+main ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #f8f9fa;
+    color: #6c757d;
+}
+
+
+/* Custom Styles for GPON Tenders Page */
+
+/* Header Styles */
+header {
+    background: url('../assets/images/tenders.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Main Content Styles */
+main h2 {
+    color: #04ff00;
+}
+
+.list-group-item {
+    margin-bottom: 10px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #f8f9fa;
+    color: #6c757d;
+}
